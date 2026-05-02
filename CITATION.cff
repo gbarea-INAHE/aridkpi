@@ -12,14 +12,14 @@ abstract: >-
 authors:
   - family-names: "Barea Paci"
     given-names: "Gustavo Javier"
-    affiliation: "Instituto de Ambiente, Habitat y Energia (INAHE), CONICET, Mendoza, Argentina"
+    affiliation: "INAHE-CONICET Mendoza"
     email: "gbarea@mendoza-conicet.gob.ar"
-    orcid: "https://orcid.org/0000-0002-5643-3206"
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # placeholder
 version: "0.1.0"
-date-released: "2026-05-02"
+date-released: "2026-01-01"
 license: MIT
 repository-code: "https://github.com/gbarea-INAHE/aridkpi"
-url: "https://gbarea-inahe.github.io/aridkpi/"
+url: "https://gbarea-INAHE.github.io/aridkpi/"
 keywords:
   - building-performance
   - climate-resilience
@@ -30,12 +30,11 @@ keywords:
   - passive-survivability
   - south-america
 references:
-  - type: data
-    title: "KPI Comparison Matrix v1.0 — climate-resilience indicators for residential buildings in arid South American climates"
+  - type: dataset
+    title: "KPI Comparison Matrix v1.0"
     authors:
       - family-names: "Barea Paci"
         given-names: "Gustavo Javier"
-        orcid: "https://orcid.org/0000-0002-5643-3206"
     year: 2026
     doi: "10.5281/zenodo.19964373"
     notes: "Source of truth that aridkpi implements"

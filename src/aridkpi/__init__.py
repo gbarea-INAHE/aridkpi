@@ -29,7 +29,7 @@ Please cite both the package and the underlying KPI matrix:
 
 * Software:
     Barea Paci, G. J. (2026). aridkpi v0.1.0 (Software).
-    Zenodo. https://doi.org/10.5281/zenodo.YYYYYYY
+    Zenodo. https://doi.org/10.5281/zenodo.19986567
 
 * Underlying matrix:
     Barea Paci, G. J. (2026). KPI Comparison Matrix v1.0 (Dataset).

@@ -76,7 +76,7 @@ Please cite both the package and the underlying KPI matrix:
      year      = {2026},
      version   = {0.1.0},
      publisher = {Zenodo},
-     doi       = {10.5281/zenodo.YYYYYYY}
+     doi       = {10.5281/zenodo.19986567}
    }
 
 Table of contents

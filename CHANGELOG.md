@@ -7,10 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0] — YYYY-MM-DD
+## [0.1.0] — 2026-05-02
 
 Initial public release. Implements the 5 CORE KPIs of the
 [KPI Comparison Matrix v1.0](https://doi.org/10.5281/zenodo.19964373).
+
+**DOI:** [10.5281/zenodo.19986567](https://doi.org/10.5281/zenodo.19986567)
 
 ### Added
 
@@ -36,8 +38,9 @@ Initial public release. Implements the 5 CORE KPIs of the
   - `plot_overheating_diagnostic()` — visual interpretation of IOD
   - `plot_kpi_summary()` — bar chart comparing typologies
 - **Tests**: 57 tests covering all public API, 88% coverage.
-- **Docs**: Sphinx site + tutorial notebook.
-- **CI/CD**: GitHub Actions for tests, docs and PyPI publishing.
+- **Docs**: Sphinx site at https://gbarea-inahe.github.io/aridkpi/ + tutorial notebook.
+- **CI/CD**: GitHub Actions for tests (Linux/macOS/Windows × Python 3.10/3.11/3.12),
+  documentation deployment, and PyPI publishing.
 
 ### Implementation notes
 
@@ -49,9 +52,9 @@ Initial public release. Implements the 5 CORE KPIs of the
   before computation.
 - The package is typed (Python 3.10+ type hints) and passes `mypy`.
 
-### Known limitations
+### External resources
 
-- DOI placeholders (`zenodo.YYYYYYY` and `zenodo.19964373`) pending Zenodo release.
-- Repository URL `gbarea-INAHE/aridkpi` placeholder pending GitHub repository creation.
-- The 4 `synthetic_dataset` prototype envelopes use illustrative parameter values;
-  for publication-grade simulation use calibrated EnergyPlus models.
+- Indexed in OpenAIRE
+- Archived in Software Heritage
+- Companion software to the
+  [KPI Comparison Matrix v1.0](https://doi.org/10.5281/zenodo.19964373)

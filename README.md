@@ -5,7 +5,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/aridkpi.svg)](https://pypi.org/project/aridkpi/)
 [![Python](https://img.shields.io/pypi/pyversions/aridkpi.svg)](https://pypi.org/project/aridkpi/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.YYYYYYY.svg)](https://doi.org/10.5281/zenodo.YYYYYYY)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19986567.svg)](https://doi.org/10.5281/zenodo.19986567)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 **Climate-resilience KPIs for residential buildings in arid South American climates.**
@@ -155,7 +155,7 @@ values.
   year      = {2026},
   version   = {0.1.0},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.YYYYYYY},
+  doi       = {10.5281/zenodo.19986567},
   url       = {https://github.com/gbarea-INAHE/aridkpi}
 }
 ```
