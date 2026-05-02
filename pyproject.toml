@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "aridkpi"
-version = "0.1.0"
+version = "0.1.1"
 description = "Climate-resilience KPIs for residential buildings in arid South American climates (BWk/BSk)"
 readme = "README.md"
 license = { text = "MIT" }

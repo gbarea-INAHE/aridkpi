@@ -38,7 +38,7 @@ Please cite both the package and the underlying KPI matrix:
 
 from __future__ import annotations
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from . import core, io, synth
 from .core import (
