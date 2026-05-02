@@ -1,0 +1,134 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aridkpi"
+version = "0.1.0"
+description = "Climate-resilience KPIs for residential buildings in arid South American climates (BWk/BSk)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Gustavo Javier Barea Paci", email = "gbarea@mendoza-conicet.gob.ar" },
+]
+keywords = [
+  "building-performance",
+  "climate-resilience",
+  "arid-climate",
+  "energyplus",
+  "kpi",
+  "annex80",
+  "passive-survivability",
+  "south-america",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.7"]
+energyplus = ["eppy>=0.5.63"]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+  "ruff>=0.5",
+  "mypy>=1.8",
+  "sphinx>=7.2",
+  "sphinx-rtd-theme>=2.0",
+  "matplotlib>=3.7",
+  "jupyter>=1.0",
+  "build>=1.0",
+]
+all = [
+  "matplotlib>=3.7",
+  "eppy>=0.5.63",
+]
+
+[project.urls]
+Homepage      = "https://github.com/gbarea-INAHE/aridkpi"
+Documentation = "https://gbarea-INAHE.github.io/aridkpi/"
+Repository    = "https://github.com/gbarea-INAHE/aridkpi"
+Issues        = "https://github.com/gbarea-INAHE/aridkpi/issues"
+Changelog     = "https://github.com/gbarea-INAHE/aridkpi/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aridkpi"]
+
+# ─── Test configuration ──────────────────────────────────────────────────────
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = [
+  "--strict-markers",
+  "--strict-config",
+  "-ra",
+  "--cov=aridkpi",
+  "--cov-report=term-missing",
+  "--cov-report=html",
+]
+
+[tool.coverage.run]
+source = ["src/aridkpi"]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+show_missing = true
+skip_covered = false
+exclude_lines = [
+  "pragma: no cover",
+  "raise NotImplementedError",
+  "if TYPE_CHECKING:",
+  "if __name__ == .__main__.:",
+]
+
+# ─── Linter / formatter ──────────────────────────────────────────────────────
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+  "E",    # pycodestyle errors
+  "W",    # pycodestyle warnings
+  "F",    # pyflakes
+  "I",    # isort
+  "B",    # flake8-bugbear
+  "UP",   # pyupgrade
+  "N",    # pep8-naming
+  "SIM",  # flake8-simplify
+  "RUF",  # ruff-specific
+]
+ignore = [
+  "N803",  # argument lowercase — we use T_ext, T_op, etc. for physical clarity
+  "N806",  # local var lowercase — same
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]  # long lines OK in tests
+
+# ─── Type checker ────────────────────────────────────────────────────────────
+[tool.mypy]
+python_version = "3.10"
+strict = false
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+files = ["src/aridkpi"]

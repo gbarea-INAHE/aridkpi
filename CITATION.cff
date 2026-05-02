@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "aridkpi: climate-resilience KPIs for residential buildings in arid South American climates"
+abstract: >-
+  Python package implementing the 5 core KPIs of the IEA EBC Annex 80
+  framework, extended for arid and semi-arid climates of South America
+  (BWk/BSk Köppen-Geiger). Implements Indoor Overheating Degree (IOD),
+  Climate Change Overheating Resistivity (CCOR), Unmet Degree Hours
+  during outage (UDH), energy sensitivity (delta E / delta T) and
+  maximum indoor thermal change rate (dT/dt max).
+authors:
+  - family-names: "Barea Paci"
+    given-names: "Gustavo Javier"
+    affiliation: "INAHE-CONICET Mendoza"
+    email: "gbarea@mendoza-conicet.gob.ar"
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # placeholder
+version: "0.1.0"
+date-released: "2026-01-01"
+license: MIT
+repository-code: "https://github.com/gbarea-INAHE/aridkpi"
+url: "https://gbarea-INAHE.github.io/aridkpi/"
+keywords:
+  - building-performance
+  - climate-resilience
+  - arid-climate
+  - energyplus
+  - kpi
+  - annex80
+  - passive-survivability
+  - south-america
+references:
+  - type: dataset
+    title: "KPI Comparison Matrix v1.0"
+    authors:
+      - family-names: "Barea Paci"
+        given-names: "Gustavo Javier"
+    year: 2026
+    doi: "10.5281/zenodo.19964373"
+    notes: "Source of truth that aridkpi implements"
