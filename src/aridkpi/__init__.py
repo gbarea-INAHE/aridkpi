@@ -58,16 +58,16 @@ except ImportError:  # pragma: no cover
 
 __all__ = [
     "__version__",
+    "ccor",
     # Modules
     "core",
+    "energy_climate_sensitivity",
     "io",
-    "synth",
     # Core KPIs (re-exported from .core for convenience)
     "iod",
-    "ccor",
-    "udh",
-    "energy_climate_sensitivity",
     "max_thermal_change_rate",
+    "synth",
+    "udh",
 ]
 
 if _has_viz:

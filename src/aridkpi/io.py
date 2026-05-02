@@ -15,16 +15,16 @@ DatetimeIndex sorted in ascending order. NaN values are preserved (use
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 import pandas as pd
 
 __all__ = [
-    "load_hobo_csv",
-    "load_generic_csv",
-    "load_energyplus_csv",
     "ensure_valid",
+    "load_energyplus_csv",
+    "load_generic_csv",
+    "load_hobo_csv",
 ]
 
 
@@ -75,7 +75,7 @@ def load_hobo_csv(
     """
     path = Path(path)
     df_raw = pd.read_csv(path, skiprows=skiprows)
-    cols_lower = {c.lower(): c for c in df_raw.columns}
+    {c.lower(): c for c in df_raw.columns}
 
     if timestamp_col not in df_raw.columns:
         # try a tolerant match

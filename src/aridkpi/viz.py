@@ -15,9 +15,9 @@ import pandas as pd
 from ._types import DEFAULT_TCOMF_FIXED
 
 __all__ = [
-    "plot_temperature_series",
-    "plot_overheating_diagnostic",
     "plot_kpi_summary",
+    "plot_overheating_diagnostic",
+    "plot_temperature_series",
 ]
 
 
@@ -165,7 +165,7 @@ def plot_kpi_summary(
     cases = list(kpi_results.keys())
     kpis_seen: list[str] = []
     for v in kpi_results.values():
-        for k in v.keys():
+        for k in v:
             if k not in kpis_seen:
                 kpis_seen.append(k)
 

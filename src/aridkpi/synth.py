@@ -11,10 +11,10 @@ import numpy as np
 import pandas as pd
 
 __all__ = [
-    "synthetic_outdoor_temperature",
-    "synthetic_indoor_temperature",
-    "synthetic_relative_humidity",
     "synthetic_dataset",
+    "synthetic_indoor_temperature",
+    "synthetic_outdoor_temperature",
+    "synthetic_relative_humidity",
 ]
 
 
@@ -120,11 +120,16 @@ def synthetic_indoor_temperature(
     daily_mean = float(T_ext.mean())
     deviation = T_ext - daily_mean
 
-    dt_hours = float(np.median(np.diff(T_ext.index.values).astype("timedelta64[s]").astype(float))) / 3600.0
-    lag_steps = int(round(phase_lag_hours / dt_hours))
+    deltas = np.diff(T_ext.index.values).astype("timedelta64[s]").astype(float)
+    dt_hours = float(np.median(deltas)) / 3600.0
+    lag_steps = round(phase_lag_hours / dt_hours)
 
     indoor_dev = deviation.shift(lag_steps).fillna(0.0) * attenuation
-    return pd.Series(daily_mean + indoor_dev.to_numpy() + indoor_offset, index=T_ext.index, name="T_in")
+    return pd.Series(
+        daily_mean + indoor_dev.to_numpy() + indoor_offset,
+        index=T_ext.index,
+        name="T_in",
+    )
 
 
 def synthetic_relative_humidity(

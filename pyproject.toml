@@ -31,8 +31,9 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",
-  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Atmospheric Science",
+  "Typing :: Typed",
 ]
 dependencies = [
   "numpy>=1.24",
@@ -118,10 +119,18 @@ select = [
 ignore = [
   "N803",  # argument lowercase — we use T_ext, T_op, etc. for physical clarity
   "N806",  # local var lowercase — same
+  "RUF001", "RUF002", "RUF003",  # ambiguous unicode (×, –, etc.) is intentional
+                                  # in scientific docstrings and error messages
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = ["E501"]  # long lines OK in tests
+"tests/*" = [
+  "E501",  # long lines OK in tests
+  "N802",  # test function names with uppercase (e.g. test_zero_delta_T_raises) — physical notation
+]
+"src/aridkpi/core.py" = [
+  "E501",  # NumPy-style docstring tables sometimes exceed 100 chars
+]
 
 # ─── Type checker ────────────────────────────────────────────────────────────
 [tool.mypy]

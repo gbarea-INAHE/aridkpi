@@ -34,11 +34,11 @@ from ._types import (
 )
 
 __all__ = [
-    "iod",
     "ccor",
-    "udh",
     "energy_climate_sensitivity",
+    "iod",
     "max_thermal_change_rate",
+    "udh",
 ]
 
 
@@ -381,7 +381,7 @@ def energy_climate_sensitivity(
         "r_squared": float(res.rvalue ** 2),
         "p_value":   float(res.pvalue),
         "std_err":   float(res.stderr),
-        "n_points":  int(len(x)),
+        "n_points":  len(x),
     }
 
 
