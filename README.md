@@ -197,10 +197,7 @@ GitHub Actions.
 ## Acknowledgements
 
 Developed at the **Instituto de Ambiente, Hábitat y Energía (INAHE)**, CONICET
-Mendoza. The framework articulates collaboration with C. Filippín
-(CONICET — La Pampa), S. Flores Larsen (CONICET — Salta), F. Bre and
-V. Fachinotti (CIMEC — Santa Fe), C. Ganem and M. V. Mercado
-(INAHE — Mendoza), and A. Esteves (INAHE — Mendoza).
+Mendoza. 
 
 This software is the second deliverable of the 2026–2029 research plan
 *"Hacia una métrica climática integrada del desempeño edilicio"* presented to
